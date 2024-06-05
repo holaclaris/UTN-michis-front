@@ -1,0 +1,21 @@
+.tarjetaGato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    margin:20px auto;
+}
+
+.tarjetaGato img{
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width:576px){
+    .tarjetaGato{
+        width:30%;
+    }
+    
+}

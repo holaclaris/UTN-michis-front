@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Single+Day&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#f0e1e1;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.single-day-regular {
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.banner {
+    display: flex;
+    background-color: black;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 15px;
+}
+
+.banner .contenedorWhatsapp {
+    position: fixed;
+    top: 1vh;
+    right: 4vw;
+    z-index: 3;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+#whatsapp {
+    color: white;
+    font-size: 3em;
+    transition: all 0.1s;
+}
+
+#whatsapp:hover {
+    transform: scale(1.2)
+}
+
+#whatsapp:active {
+    transform: scale(1.2)
+}
+
+.banner p {
+    color: white;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 5px;
+    width: 80vw;
+
+}
+
+.banner .contenedorWhatsapp a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    border-top: 7px solid white;
+}
+
+.contenedorTitulo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    position: absolute;
+    left: 1vw;
+}
+
+.contenedorTitulo h1 {
+    color: black;
+    filter: drop-shadow(2px 4px 2px pink);
+    font-style:italic;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.contenedorTitulo p {
+    filter: drop-shadow(2px 4px 2px pink);
+    font-size: 0.9rem;
+    font-variant: all-small-caps;
+    padding-left: 39px;
+    margin-top: -19px;
+}
+
+.navBar {
+    position: absolute;
+    top: 1vh;
+    width: 100%;
+}
+
+#hamburguesa {
+    filter: drop-shadow(2px 4px 2px pink);
+    font-size: 4em;
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+#hamburguesa:hover {
+    transform: scale(1.2);
+}
+
+#hamburguesa:active {
+    transform: scale(1.2);
+}
+
+
+/*Clases al desplegar el menu hamburguesa*/
+#hamburguesa.is-open{   
+   display: none;
+}
+
+#navBar.is-open{
+    top: 0vh;
+}
+#barraOcultar.is-open{
+    display: flex;
+    padding: 0px 20px;
+}
+
+#cruz.is-open{
+    display:flex;
+}
+
+#contenedorTitulo.is-open{
+    left:55vw;
+    top:0;
+    scale:0.6;
+}
+/*Fin clases menu Hamburguesa*/
+
+
+#cruz {
+    display: none;
+}
+
+.navBar ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.navBar .navLinks {
+    display: flex;
+    flex-direction: column;
+}
+
+.navBar .navLinks li {
+    transition: all 0.2s
+}
+
+.navBar .navLinks li:hover {
+    transform: scale(1.2);
+}
+
+.navBar .navLinks li:active {
+    transform: scale(1.2);
+}
+
+.navBar ul a {
+    color: black;
+    filter: drop-shadow(2px 4px 2px pink);
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+.navBar ul li {
+    padding: 10px;
+}
+
+.contenedorLupaCarrito {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#busqueda {
+    background-color: #ffffffde;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5px;
+    padding: 7px;
+}
+
+.contenedorPortada img {
+    object-fit: cover;
+    width: 100%;
+}
+.contenedorPortada.paginas{
+    overflow:hidden;
+   }
+.contenedorPortada img{
+    border-bottom: 13px solid #56584352;
+}
+
+#barraOcultar {
+    background-color:#f0e1e1;
+    display: none;
+}
+
+main {
+    padding: 15px;
+}
+
+.contenedorGatos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.contenedorFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+    padding: 20px 0;
+}
+
+.contenedorIconosWhatsapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorFooter .contenedorWhatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.1s;
+}
+
+.contenedorFooter .contenedorWhatsapp:hover {
+    transform: scale(1.2);
+    color: #343336;
+}
+
+.contenedorFooter .contenedorWhatsapp:active {
+    transform: scale(1.2);
+    color: #343336;
+}
+
+.contenedorFooter .contenedorWhatsapp a {
+    color: black;
+    display: flex;
+    text-decoration: none;
+}
+
+#whatsappFooter{
+    font-size: 2em;
+    padding: 5px;
+}
+
+.contenedorFooter .contenedorWhatsapp p {
+    font-size: 1em;
+    margin-bottom: 0;
+    position: relative;
+    top: 11px;
+}
+
+.contenedorFooter .contenedorIconos a {
+    padding: 0 5px;
+    text-decoration: none;
+}
+
+.contenedorIconos .icono {
+    color: black;
+    font-size: 1.5em;
+    transition: all 0.1s;
+}
+
+.contenedorIconos .icono:hover {
+    transform: scale(1.2);
+    color: #343336;
+}
+
+.contenedorIconos .icono:active {
+    transform: scale(1.2);
+    color: #343336;
+}
+
+
+/*Media Queries*/
+
+@media screen and (min-width: 420px){
+    .contenedorTitulo h1 {
+        font-size: 3rem;
+    }
+    
+    .contenedorTitulo p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .contenedorGatos{
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .banner {
+        padding: 0 10%;
+    }
+    .banner .contenedorWhatsapp {
+        top: 12vh;
+        right: 5vw;
+        filter: drop-shadow(2px 4px 4px black);
+    }
+
+    header{
+        background-image: url(https://images.unsplash.com/photo-1445499348736-29b6cdfc03b9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-position: center;
+        background-size: cover;
+        border-bottom: 13px solid #56584352;
+        padding-top: 60px;
+    }
+
+    .contenedorTitulo {      
+        text-align: center;
+        align-items: flex-start;
+        padding: 25px 20px;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    #navBar {
+        background-color: #f5f5f54a;
+        margin: auto;
+        padding-bottom:10px;
+        position: relative;
+    }
+
+    #barraOcultar {
+        width: 95%;
+    }
+
+    .navBar .navList {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .navBar ul li{
+        padding: 0 30px;
+    }
+
+    .navBar ul a {
+        font-size: 2vw;
+    }
+
+    .navBar .navLinks {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #barraOcultar {
+        background-color: #eaebef00;
+        display: flex;
+        padding: 0;
+    }
+
+    #cruz,
+    #hamburguesa {
+        display: none;
+    }
+
+    #busqueda {
+        width: 22vw;
+    }
+
+    .contenedorPortada {
+        display: none;
+    }
+
+    .contenedorPortada.paginas {
+        display: none;
+    }
+
+    .contenedorIconosWhatsapp {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+    .navList {
+        display: flex;
+        align-items: center;
+    }
+
+    .presentacion {
+        width: 70%;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .contenedorPortada {
+        width: 60%;
+    }
+}
