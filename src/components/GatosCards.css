@@ -1,0 +1,14 @@
+.contenedorGatos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 576px){
+    .contenedorGatos{
+        flex-direction: row;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+}

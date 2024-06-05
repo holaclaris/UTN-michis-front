@@ -1,4 +1,5 @@
 .tarjetaGato{
+    filter: drop-shadow(2px 4px 6px black);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,10 +13,36 @@
     width: 100%;
     object-fit: cover;
 }
+.tarjetaGato .textoBotonesGato{
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.tarjetaGato .textoGato{
+    padding:10px
+}
+
+.tarjetaGato h3{
+    padding:10px;
+    text-align: center;
+}
+
+.tarjetaGato button{
+    margin: 5px;
+    width:60%;
+
+}
 
 @media screen and (min-width:576px){
     .tarjetaGato{
+        width:40%;
+    }   
+}
+
+@media screen and (min-width: 768px){
+    .tarjetaGato{
         width:30%;
     }
-    
 }

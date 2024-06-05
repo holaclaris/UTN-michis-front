@@ -221,13 +221,6 @@ main {
     padding: 15px;
 }
 
-.contenedorGatos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .presentacion {
     display: flex;
     flex-direction: column;
@@ -324,11 +317,6 @@ main {
     }
 }
 
-@media screen and (min-width: 576px){
-    .contenedorGatos{
-        flex-direction: row;
-    }
-}
 
 @media screen and (min-width:768px) {
 

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import './GatosCards.css'
 import Card from './Card';
 
 function GatosCards(){
