@@ -85,6 +85,7 @@ header {
     left: 1vw;
 }
 
+
 .contenedorTitulo h1 {
     color: black;
     filter: drop-shadow(2px 4px 2px pink);
@@ -126,7 +127,7 @@ header {
 
 /*Clases al desplegar el menu hamburguesa*/
 #hamburguesa.is-open{   
-   display: none;
+   display:none; 
 }
 
 #navBar.is-open{
@@ -330,6 +331,25 @@ main {
 }
 
 @media screen and (min-width:768px) {
+
+ /* Se revierten clases del menu hamburguesa desplegado en resoluciones mayores*/
+
+    #navBar.is-open {
+        top: 1vh;
+    }
+
+    #cruz.is-open {
+        display: none;
+    }
+
+    #contenedorTitulo.is-open {
+        left: 1vw;
+        top: 0;
+        scale: 1;
+    }
+/*Fin clases menu hamburguesa */
+
+
     .banner {
         padding: 0 10%;
     }
