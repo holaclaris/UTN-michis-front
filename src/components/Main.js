@@ -16,7 +16,7 @@ function Main() {
       <div className="presentacion">
         <p>¿Dudas o consultas?</p>
         <p>Contactanos por Whatsapp o redes sociales</p>
-        <p><i>Michis</i></p>
+        <p><i>MICHIS</i></p>
       </div>
 
     </main>

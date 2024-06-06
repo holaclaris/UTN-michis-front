@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 function Home(){
     return(
-      <body> 
+      <body className='roboto-medium'> 
         <Banner />
         <Header />
         <Main />

@@ -14,6 +14,7 @@ const Card = ({ gatos }) =>{
                             <h3>{gato.nombre}</h3>
                             <p>Sexo: {gato.sexo}</p>
                             <p>Edad: {gato.edad}</p>
+                            <p>Raza: {gato.raza}</p>
                             <p>Acerca de: {gato.descripcion}</p>
                             </div>
                             <button>Eliminar</button><button>Editar</button>

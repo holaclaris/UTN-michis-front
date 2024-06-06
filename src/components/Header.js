@@ -17,8 +17,8 @@ function Header(){
     return (
         <header>
         <div className={`contenedorTitulo ${isOpen ? "is-open": ""}`} id="contenedorTitulo">
-          <h1 className="animate__animated animate__flipInY single-day-regular">Michis</h1>
-          <p className="animate__animated animate__flipInY">TU MEJOR AMIGO</p>
+          <h1 className="animate__animated animate__flipInY roboto-thin">MICHIS</h1>
+          <p className="animate__animated animate__flipInY roboto-thin">TU MEJOR AMIGO</p>
         </div>
   
         <nav className={`navBar ${isOpen ? "is-open": ""}`} id="navBar" >
@@ -27,10 +27,10 @@ function Header(){
             <ul className="navList navLinks">
               <li><IoMdClose id="cruz" onClick={toggleMenu} className={`${isOpen ? "is-open": ""}`}/></li> 
               <li>
-                <Link to="/" className='links'>GATITOS</Link>
+                <Link to="/" className='links roboto-thin'>GATITOS</Link>
               </li>
               <li>
-                <Link to="/AgregarGatitos" className='links'>AGREGAR GATITOS</Link>
+                <Link to="/AgregarGatitos" className='links roboto-thin'>AGREGAR GATITOS</Link>
               </li>
 
               <li>
