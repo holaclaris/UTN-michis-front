@@ -16,7 +16,6 @@ const [gatos, setGatos] = useState([]);
 
     useEffect(()=>{
         fetchGatos(url)
-
     },[])
 
     return(
