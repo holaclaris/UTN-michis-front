@@ -2,24 +2,23 @@ import React, {useEffect, useState} from 'react';
 import './GatosCards.css'
 import Card from './Card';
 
-function GatosCards(){
-const [gatos, setGatos] = useState([]);
+function GatosCards() {
 
-    const url = "http://localhost:4000"
-    const fetchGatos = (url) =>{
-        fetch(url)
-          .then(response=>response.json())
-          .then(gatos => setGatos(gatos.data))
-          .catch(error => console.log(error))
+    const [gatos, setGatos] = useState([]);
 
+    const traerGatos = () => {
+        fetch("http://localhost:4000/")
+            .then(response => response.json())
+            .then(gatos => setGatos(gatos.data))
+            .catch(err => console.log(err))
     };
 
-    useEffect(()=>{
-        fetchGatos(url)
-    },[])
+    useEffect(() => {
+        traerGatos()
+    }, [])
 
-    return(
-        <div className = "contenedorGatos">
+    return (
+        <div className="contenedorGatos">
             <Card gatos={gatos} />
         </div>
     )
