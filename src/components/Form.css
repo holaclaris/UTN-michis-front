@@ -52,25 +52,6 @@ form input, textarea, select {
     margin-bottom: 10px;
     width: 100%;    
 }
-/* .contenedorSexo{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: baseline;
-}
-.contenedorSexo div{
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    flex-direction: row;
-    font-weight: 400;
-}
-.contenedorSexo p{
-    padding-bottom: 5px;
-}
-.contenedorSexo label{
-    padding:0;
-} */
 
 textarea {
     height: 100px;
@@ -95,17 +76,6 @@ button {
     text-align: center;
 }
 
-/* .presentacion {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3em;
-    line-height: 2;
-    margin: auto;
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-} */
-
 @media only screen and (min-width: 576px) {
     .formulario {
         border-radius: 10px;
@@ -126,10 +96,6 @@ button {
         width:40%;
     }
 }
-    /* .presentacion {
-        width: 70%;
-    }
-} */
 
 @media only screen and (min-width: 1200px){
     .formulario{
