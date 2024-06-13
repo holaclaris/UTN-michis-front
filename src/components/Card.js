@@ -1,12 +1,10 @@
 import "./Card.css";
-import { Fragment } from 'react';
 
 const Card = ({ gatos }) => {
 
-
     return (
         <>
-            { 
+            {
                 gatos.map((gato) => (
                     <div key={gato.id} className="tarjetaGato">
                         <div>
@@ -15,14 +13,13 @@ const Card = ({ gatos }) => {
                                 <div className="textoGato">
                                     <h3>{gato.nombre}</h3>
                                     <p>Sexo: {gato.sexo}</p>
-                                    <p>Edad: {gato.edad}</p>
                                     <p>Raza: {gato.raza}</p>
+                                    <p>Edad: {gato.edad}</p>
                                     <p>Acerca de: {gato.descripcion}</p>
                                 </div>
-                                <button>Eliminar</button>
                                 <button>Editar</button>
+                                <button>Eliminar</button>
                             </div>
-
                         </div>
                     </div>
                 ))

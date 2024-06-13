@@ -41,14 +41,36 @@
     flex: 1;
 }
 
+form input, textarea, select{
+    padding: 10px 0;
+}
+
 form input, textarea, select {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
+    background-color:#e6d3d775; 
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color:#e6d3d775; 
+    margin-bottom: 10px;
+    width: 100%;    
 }
+/* .contenedorSexo{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: baseline;
+}
+.contenedorSexo div{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: row;
+    font-weight: 400;
+}
+.contenedorSexo p{
+    padding-bottom: 5px;
+}
+.contenedorSexo label{
+    padding:0;
+} */
 
 textarea {
     height: 100px;
@@ -63,7 +85,17 @@ button {
     width: 100%;
 }
 
-.presentacion {
+.exitoEnvio{
+    background-color: #9fe59f;
+    border: #9E9E9E solid 1px;
+    border-radius: 4px;
+    margin: 50px auto;
+    padding: 30px;
+    width: 50%;
+    text-align: center;
+}
+
+/* .presentacion {
     display: flex;
     flex-direction: column;
     font-size: 1.3em;
@@ -72,7 +104,7 @@ button {
     padding: 20px;
     width: 100%;
     text-align: center;
-}
+} */
 
 @media only screen and (min-width: 576px) {
     .formulario {
@@ -90,13 +122,20 @@ button {
         width:70%;
         margin: 20px auto;
     }
-    .presentacion {
-        width: 70%;
+    .exitoEnvio{
+        width:40%;
     }
 }
+    /* .presentacion {
+        width: 70%;
+    }
+} */
 
 @media only screen and (min-width: 1200px){
     .formulario{
         width: 60%;
+    }
+    .exitoEnvio{
+        width:30%
     }
 }
