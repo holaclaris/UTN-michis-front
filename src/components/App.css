@@ -434,6 +434,12 @@ main {
         display: flex;
         align-items: center;
     }
+    .contenedorLupaCarrito{
+        margin-left: 20vw;
+    }
+    #busqueda{
+        width: 30vw;
+    }
 
     .presentacion {
         width: 70%;

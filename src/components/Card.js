@@ -1,5 +1,5 @@
 import "./Card.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const Card = ({ gatos }) => {
     const[mensajeEditado, setMensajeEditado] =useState(false)
@@ -45,8 +45,9 @@ const Card = ({ gatos }) => {
                                     <p>Acerca de: {gato.descripcion}</p>
                                 </div>
                                 <button className="botonEditar"
-                                        //Ojo... no puedo poner el mismo id?
-                                        onClick={(e)=>handleEditar(e)}> Editar 
+                                        //Ojo... no puedo poner el mismo id que Eliminar?
+                                        // onClick={(e)=>handleEditar(e)}
+                                        > Editar 
                                 </button>
                                 <button className="botonEliminar"
                                         id={gato.id}
@@ -66,4 +67,6 @@ const Card = ({ gatos }) => {
     </>
     )
 }
+
+
 export default Card;
