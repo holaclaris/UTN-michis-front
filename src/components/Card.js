@@ -63,10 +63,11 @@ const Card = ({ gatos }) => {
          :
          <div className="exitoEliminado">
          <p>Eliminado!</p>
-         </div>}
+         </div>
+         
+         }
     </>
     )
 }
-
 
 export default Card;
