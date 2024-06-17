@@ -1,8 +1,9 @@
 import "./Card.css";
-import { useState,useEffect } from "react";
+import { useState} from "react";
+// import {useEffect } from "react";
 
 const Card = ({ gatos }) => {
-    const[mensajeEditado, setMensajeEditado] =useState(false)
+    // const[mensajeEditado, setMensajeEditado] =useState(false)
     const[mensajeEliminado, setMensajeEliminado] = useState(false)
 
     //FALTA LA FUNCION PARA EDITAR 
@@ -23,7 +24,6 @@ const Card = ({ gatos }) => {
               setTimeout(() => {setMensajeEliminado(false) }, 3000)
         })
         .catch(err => console.log("No se logro enviar: " + err))
-
     }
 
     return (
