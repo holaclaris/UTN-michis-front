@@ -78,7 +78,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     position: relative;
-    border-top: 7px solid white;
+    border-top: 3px solid white;
 }
 
 .contenedorTitulo {
@@ -224,9 +224,7 @@ header {
 .contenedorPortada.paginas{
     overflow:hidden;
    }
-.contenedorPortada img{
-    border-bottom: 13px solid #56584352;
-}
+
 
 #barraOcultar {
     background-color: #f2f3f4e0;
@@ -323,16 +321,6 @@ main {
 
 /*Media Queries*/
 
-@media screen and (min-width: 420px){
-    .contenedorTitulo h1 {
-        font-size: 3rem;
-    }
-    
-    .contenedorTitulo p {
-        font-size: 1.2rem;
-    }
-}
-
 
 @media screen and (min-width:768px) {
 
@@ -353,7 +341,6 @@ main {
     }
 /*Fin clases menu hamburguesa */
 
-
     .banner {
         padding: 0 10%;
     }
@@ -364,11 +351,12 @@ main {
     }
 
     header{
-        background-image: url(https://cdn.pixabay.com/photo/2023/07/05/04/45/european-shorthair-8107433_1280.jpg);
+        background-image: url(https://clipartcraft.com/images/cat-transparent-background-4.png);
+        /* background-image: url(https://cdn.pixabay.com/photo/2023/07/05/04/45/european-shorthair-8107433_1280.jpg); */
         background-position: center;
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         border-bottom: none;
-        padding-top: 60px;
     }
 
     .contenedorTitulo {      
@@ -381,9 +369,8 @@ main {
     }
 
     #navBar {
-        background-color: #f5f5f59e;
+        background-color: #b69f9f4d;
         margin: auto;
-        padding-bottom:10px;
         position: relative;
     }
 
@@ -397,7 +384,7 @@ main {
     }
 
     .navBar ul li{
-        padding: 0 30px;
+        padding: 0 20px;
     }
 
     .navBar ul a {
@@ -443,9 +430,7 @@ main {
         display: flex;
         align-items: center;
     }
-    .contenedorLupaCarrito{
-        margin-left: 20vw;
-    }
+  
     #busqueda{
         width: 30vw;
     }

@@ -47,7 +47,7 @@ function Header(){
   
         <div className="contenedorPortada">
           <img 
-            src="/portada1.jpg"
+            src="/cat.png"
             alt="Gato de perfil" 
             />
         </div>

@@ -18,7 +18,7 @@ const Card = ({ gatos, mensajeEliminado, handleEliminar }) => {
                                             <p>Sexo: {gato.sexo}</p>
                                             <p>Raza: {gato.raza}</p>
                                             <p>Edad: {gato.edad}</p>
-                                            <p>Acerca de: {gato.descripcion}</p>
+                                            <p className="descripcion">{gato.descripcion}</p>
                                         </div>
                                         <button className="botonEditar"
                                         //Ojo... no puedo poner el mismo id que Eliminar?
