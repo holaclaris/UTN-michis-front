@@ -27,10 +27,10 @@ function Header(){
             <ul className="navList navLinks">
               <li><IoMdClose id="cruz" onClick={toggleMenu} className={`${isOpen ? "is-open": ""}`}/></li> 
               <li>
-                <Link to="/" className='links roboto-thin'>GATITOS</Link>
+                <Link to="/" className='links roboto-thin'>GATOS</Link>
               </li>
               <li>
-                <Link to="/AgregarGatitos" className='links roboto-thin'>AGREGAR GATITOS</Link>
+                <Link to="/AgregarGatitos" className='links roboto-thin'>AGREGAR GATOS</Link>
               </li>
 
               <li>

@@ -1,5 +1,6 @@
 import "./Form.css";
 import { useState } from "react";
+import {Link} from 'react-router-dom';
 
 function Form() {
     const [mensaje, setMensaje] = useState(false)
@@ -37,8 +38,8 @@ function Form() {
         { mensaje === false ? 
        <div className="formulario"> 
             <div className="titulo">
-                <h2>AÑADIR GATITO</h2>
-                <p>Completa el formulario con los datos del gatito y aparecera en la pagina</p>
+                <h2>AÑADIR GATO</h2>
+                <p>Completa el formulario con los datos del gato y aparecerá en la página</p>
             </div>
 
             
@@ -82,7 +83,7 @@ function Form() {
                     <label htmlFor="descripcion">Acerca de: </label>
                     <textarea id="descripcion" name="descripcion" placeholder="Escribe algo sobre él" required></textarea>
 
-                    <label htmlFor="img">Sube una imagen: (URL) </label>
+                    <label htmlFor="img">Sube el link de su imagen (URL) </label>
                     <textarea name="img" id="img" placeholder="https://images.com/foto-gato-345622.jpg..." required></textarea>
 
                     <button type="submit" value="Enviar">Enviar</button>
@@ -91,7 +92,8 @@ function Form() {
         </div>
         : 
         <div className="exitoEnvio">
-        <p>Enviado!</p>
+        <p>¡Enviado!</p>
+        <p><Link to="/" className='links roboto-thin'><button> CLICK PARA VER TARJETAS</button></Link></p>
         </div>}
     </div>
     )

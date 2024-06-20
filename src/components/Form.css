@@ -75,6 +75,14 @@ button {
     width: 50%;
     text-align: center;
 }
+.exitoEnvio button{
+    margin: 10px 0px;
+    padding:5px;
+    transition: all 0.2s ease
+}
+.exitoEnvio button:hover{
+   transform: scale(1.1);
+}
 
 @media only screen and (min-width: 576px) {
     .formulario {

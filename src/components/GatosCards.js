@@ -25,7 +25,6 @@ function GatosCards() {
 
     // }
 
-
     const handleEliminar=(e)=>{
       e.preventDefault()
 
