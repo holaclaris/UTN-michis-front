@@ -1,30 +1,8 @@
 import "./Card.css";
-import { useState} from "react";
-// import {useEffect } from "react";
 
-const Card = ({ gatos }) => {
-    // const[mensajeEditado, setMensajeEditado] =useState(false)
-    const[mensajeEliminado, setMensajeEliminado] = useState(false)
+const Card = ({ gatos, mensajeEliminado,handleEliminar }) => {
 
-    //FALTA LA FUNCION PARA EDITAR 
-    //const handleEditar=(e)=>{
-    //     e.preventDefault()
 
-    // }
-
-    const handleEliminar=(e)=>{
-      e.preventDefault()
-
-      fetch(`http://localhost:4000/${e.target.id}`, {
-        method:'delete',
-        })
-        .then((resp) =>{return resp.json()})
-        .then((data) => {
-              data.status === 200 ? setMensajeEliminado(true) : setMensajeEliminado(false);
-              setTimeout(() => {setMensajeEliminado(false) }, 3000)
-        })
-        .catch(err => console.log("No se logro enviar: " + err))
-    }
 
     return (
       <>  
@@ -51,7 +29,7 @@ const Card = ({ gatos }) => {
                                 </button>
                                 <button className="botonEliminar"
                                         id={gato.id}
-                                        onClick={(e)=>handleEliminar(e)}>Eliminar
+                                        onClick={handleEliminar}>Eliminar
                                 </button>
                             </div>
                         </div>

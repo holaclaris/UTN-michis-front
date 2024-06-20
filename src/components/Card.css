@@ -1,14 +1,13 @@
 .tarjetaGato{
+    background-color: white;
     filter: drop-shadow(2px 4px 6px black);
     display: flex;
     flex-direction: column;
     font-weight:400;
     justify-content: center;
-    background-color: white;
     padding: 20px;
     width: 90%;
     margin:20px auto;
-    
 }
 
 .tarjetaGato img{
