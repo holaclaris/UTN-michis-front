@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";  
 import { MdOutlineMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
+import { IoIosSearch } from "react-icons/io";
 import 'animate.css';
 
 
@@ -35,8 +36,9 @@ function Header(){
 
               <li>
                 <div className="contenedorLupaCarrito">
-                  <i className="fa-solid fa-magnifying-glass"></i>
-                  <input type="text" id="busqueda" name="busqueda" placeholder="Buscar..."/>
+                  <IoIosSearch id="lupa"/>
+                  <input type="text" id="busqueda" name="busqueda" placeholder="Ingresa palabras a buscar..."/>
+                  <button type="submit" id="buscar"> Buscar </button>
                 </div>
               </li>
             </ul>
