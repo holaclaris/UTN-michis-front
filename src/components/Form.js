@@ -93,7 +93,7 @@ function Form() {
         : 
         <div className="exitoEnvio">
         <p>¡Enviado!</p>
-        <p><Link to="/" className='links roboto-thin'><button> CLICK PARA VER TARJETAS</button></Link></p>
+        <p><Link to="/" className='links roboto-thin'><button> VER TARJETAS</button></Link></p>
         </div>}
     </div>
     )

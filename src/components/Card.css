@@ -51,6 +51,15 @@
     width: 50%;
     text-align: center;
 }
+.exitoEliminado button{
+    margin: 10px 0px;
+    padding:10px;
+    width: 50%;
+    transition: all 0.2s ease
+}
+.exitoEliminado button:hover{
+    transform: scale(1.1);
+ }
 
 @media screen and (min-width:576px){
     .tarjetaGato{

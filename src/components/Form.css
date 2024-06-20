@@ -77,7 +77,8 @@ button {
 }
 .exitoEnvio button{
     margin: 10px 0px;
-    padding:5px;
+    padding:10px;
+    width: 50%;
     transition: all 0.2s ease
 }
 .exitoEnvio button:hover{
