@@ -3,6 +3,7 @@ import FormEditar from "./FormEditar";
 import { Link } from "react-router-dom";
 const Card = ({ gatos,
     mensajeEditado,
+    setMensajeEditado,
     handleEditar,
     mensajeEliminado,
     handleEliminar,
@@ -53,7 +54,9 @@ const Card = ({ gatos,
                         :
                         <FormEditar 
                             gatos = { gatos} 
-                            idGatoElegido = { idGatoElegido } />
+                            idGatoElegido = { idGatoElegido } 
+                            mensajeEditado = { mensajeEditado }
+                            setMensajeEditado= { setMensajeEditado }/>
 
             }
         </>

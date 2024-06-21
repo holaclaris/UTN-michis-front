@@ -2,7 +2,7 @@ import "./Form.css";
 import { useState } from "react";
 import {Link} from 'react-router-dom';
 
-function FormEditar({ gatos, idGatoElegido }) {
+function FormEditar({ gatos, idGatoElegido, mensajeEditado, setMensajeEditado }) {
 
     const [mensaje, setMensaje] = useState(false)
 
@@ -31,7 +31,9 @@ function FormEditar({ gatos, idGatoElegido }) {
             .then((data) => {
                 console.log(data)
                  data.info.status === 200 ? setMensaje(true) : setMensaje(false);
-                 setTimeout(() => { setMensaje(false) }, 3000)
+                 setTimeout(() => { setMensaje(false) }, 2000);
+                 setTimeout(()=>{ setMensajeEditado(false) },2000)
+                 
             })
             .catch(err => console.log("No se logro enviar: " + err))
     }

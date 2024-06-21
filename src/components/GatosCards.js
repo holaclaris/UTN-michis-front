@@ -9,6 +9,8 @@ function GatosCards() {
     const [mensajeEliminado, setMensajeEliminado] = useState(false);
     const [idGatoElegido, setIdGatoElegido] = useState(``);
 
+
+    //Mostrar todos los gatos
     const traerGatos = () => {
         fetch("http://localhost:4000/")
             .then(response => response.json())
@@ -38,7 +40,7 @@ function GatosCards() {
             .then((resp) => { return resp.json() })
             .then((data) => {
                 data.status === 200 ? setMensajeEliminado(true) : setMensajeEliminado(false);
-                setTimeout(() => { setMensajeEliminado(false) }, 3000)
+                setTimeout(() => { setMensajeEliminado(false) }, 2000)
             })
             .catch(err => console.log("No se logro enviar: " + err))
     }
@@ -47,6 +49,7 @@ function GatosCards() {
         <div className="contenedorGatos">
             <Card gatos={ gatos }
                 mensajeEditado={ mensajeEditado }
+                setMensajeEditado={ setMensajeEditado}
                 handleEditar={ handleEditar }
                 mensajeEliminado={ mensajeEliminado }
                 handleEliminar={ handleEliminar }

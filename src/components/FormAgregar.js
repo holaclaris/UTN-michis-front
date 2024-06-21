@@ -28,7 +28,7 @@ function FormAgregar() {
             .then((data) => {
                 console.log(data)
                  data.info.status === 201 ? setMensaje(true) : setMensaje(false);
-                 setTimeout(() => { setMensaje(false) }, 3000)
+                 setTimeout(() => { setMensaje(false) }, 2000)
             })
             .catch(err => console.log("No se logro enviar: " + err))
     }
