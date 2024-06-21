@@ -1,6 +1,6 @@
 import Banner from "./Banner";
 import Header from "./Header";
-import Form from "./Form";
+import FormAgregar from "./FormAgregar";
 import Footer from "./Footer";
 
 function AgregarGatitos(){
@@ -8,7 +8,7 @@ function AgregarGatitos(){
       <body>  
         <Banner/>
         <Header />
-        <Form />
+        <FormAgregar />
         <Footer/>
       </body>
     )

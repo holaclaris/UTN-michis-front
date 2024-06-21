@@ -31,13 +31,13 @@ function Header(){
                 <Link to="/" className='links roboto-thin'>GATOS</Link>
               </li>
               <li>
-                <Link to="/AgregarGatitos" className='links roboto-thin'>AGREGAR GATOS</Link>
+                <Link to="/AgregarGatitos" className='links roboto-thin'>AÑADIR GATO</Link>
               </li>
 
               <li>
                 <div className="contenedorLupaCarrito">
                   <IoIosSearch id="lupa"/>
-                  <input type="text" id="busqueda" name="busqueda" placeholder="Ingresa palabras a buscar..."/>
+                  <input type="text" id="busqueda" name="busqueda" placeholder="Ingresa tu búsqueda..."/>
                   <button type="submit" id="buscar"> Buscar </button>
                 </div>
               </li>

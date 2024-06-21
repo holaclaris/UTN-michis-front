@@ -1,11 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './GatosCards.css'
 import Card from './Card';
 
 function GatosCards() {
 
     const [gatos, setGatos] = useState([]);
-    const[mensajeEliminado, setMensajeEliminado] = useState(false);
+    const [mensajeEditado, setMensajeEditado] = useState(false)
+    const [mensajeEliminado, setMensajeEliminado] = useState(false);
+    const [idGatoElegido, setIdGatoElegido] = useState(``);
 
     const traerGatos = () => {
         fetch("http://localhost:4000/")
@@ -16,32 +18,40 @@ function GatosCards() {
 
     useEffect(() => {
         traerGatos()
-    }, [mensajeEliminado])
+    }, [mensajeEliminado, mensajeEditado])
 
-    
-    //FALTA FUNCION PARA EDITAR 
-    //const handleEditar=(e)=>{
-    //     e.preventDefault()
 
-    // }
+    //Editar gato por id 
+    const handleEditar = (e) => {
+        e.preventDefault()
+        setMensajeEditado(true)
+        setIdGatoElegido(e.target.id)
+    }
 
-    const handleEliminar=(e)=>{
-      e.preventDefault()
+    //Eliminar gato por id
+    const handleEliminar = (e) => {
+        e.preventDefault()
 
-      fetch(`http://localhost:4000/${e.target.id}`, {
-        method:'delete',
+        fetch(`http://localhost:4000/${e.target.id}`, {
+            method: 'delete',
         })
-        .then((resp) =>{return resp.json()})
-        .then((data) => {
-              data.status === 200 ? setMensajeEliminado(true) : setMensajeEliminado(false);
-              setTimeout(() => {setMensajeEliminado(false) }, 3000)
-        })
-        .catch(err => console.log("No se logro enviar: " + err))
+            .then((resp) => { return resp.json() })
+            .then((data) => {
+                data.status === 200 ? setMensajeEliminado(true) : setMensajeEliminado(false);
+                setTimeout(() => { setMensajeEliminado(false) }, 3000)
+            })
+            .catch(err => console.log("No se logro enviar: " + err))
     }
 
     return (
         <div className="contenedorGatos">
-            <Card gatos={gatos} mensajeEliminado={mensajeEliminado} handleEliminar={handleEliminar}/>
+            <Card gatos={ gatos }
+                mensajeEditado={ mensajeEditado }
+                handleEditar={ handleEditar }
+                mensajeEliminado={ mensajeEliminado }
+                handleEliminar={ handleEliminar }
+                idGatoElegido = { idGatoElegido }
+            />
         </div>
     )
 }

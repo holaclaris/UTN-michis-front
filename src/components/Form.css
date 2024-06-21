@@ -12,9 +12,6 @@
 }
 
 .titulo {
-    background-image: url(https://images.unsplash.com/photo-1526280524276-51b1c8a46321?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
-    background-position:bottom;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,19 +63,18 @@ button {
     width: 100%;
 }
 
-.exitoEnvio{
+.exitoEnvio, .exitoEditado{
     background-color: #9fe59f;
     border: #9E9E9E solid 1px;
     border-radius: 4px;
     margin: 50px auto;
     padding: 30px;
-    width: 50%;
+    width: 30vw;
     text-align: center;
 }
-.exitoEnvio button{
+.exitoEnvio button, .exitoEditado button{
     margin: 10px 0px;
     padding:10px;
-    width: 50%;
     transition: all 0.2s ease
 }
 .exitoEnvio button:hover{
@@ -90,12 +86,16 @@ button {
         border-radius: 10px;
         flex-direction: row;
     }
-    .titulo{
+
+    .titulo {
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
+        background-image: url(https://w0.peakpx.com/wallpaper/803/525/HD-wallpaper-cute-cat-reading-study-book-read-cat-kitten.jpg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
-
 @media only screen and (min-width: 768px){
     .formulario{
         width:70%;
