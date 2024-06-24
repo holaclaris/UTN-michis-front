@@ -33,7 +33,6 @@ function FormEditar({ gatos, idGatoElegido, setMensajeEditado }) {
                 console.log(data)
                 if (data.info.status === 200){
                  setMensajeActualizado(true) 
-                //  : setMensajeActualizado(false)
                  setTimeout(()=> { setMensajeActualizado(false) }, 2000)
                  setTimeout(()=>{ setMensajeEditado(false) },2000)
                 } 

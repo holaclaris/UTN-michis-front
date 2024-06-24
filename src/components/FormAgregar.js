@@ -3,7 +3,8 @@ import { useState } from "react";
 import {Link} from 'react-router-dom';
 
 function FormAgregar() {
-    const [mensaje, setMensaje] = useState(false)
+    const [mensajeEnviado, setMensajeEnviado] = useState(false)
+    const [errorEnvio, setErrorEnvio] = useState(false)
    
     const handlerForm = (e) => {
         e.preventDefault();
@@ -20,22 +21,31 @@ function FormAgregar() {
 
         fetch(`http://localhost:4000/`, {
             method:`post`,
-            body: JSON.stringify(formInfo), //transformo info en json
+            body: JSON.stringify(formInfo), 
             headers:{
                 "Content-Type":"application/json"
             }})
             .then((resp) =>{return resp.json()})
             .then((data) => {
                 console.log(data)
-                 data.info.status === 201 ? setMensaje(true) : setMensaje(false);
-                 setTimeout(() => { setMensaje(false) }, 2000)
+                if (data.info.status === 201){
+                    setMensajeEnviado(true) 
+                    setTimeout(()=> { setMensajeEnviado(false) }, 2000)
+            
+                } else if (data.info.status === 422){
+                    //Verificar por que cuando da este error luego se cae el server
+                    setMensajeEnviado(false)
+                    setErrorEnvio(true)
+                    setTimeout(()=>{ setErrorEnvio(false) }, 2000)
+                }
             })
             .catch(err => console.log("No se logro enviar: " + err))
     }
 
     return (
        <div> 
-        { mensaje === false ? 
+        { (!mensajeEnviado && !errorEnvio) 
+        ?
        <div className="formulario"> 
             <div className="titulo">
                 <h2>AÑADIR GATO</h2>
@@ -89,12 +99,34 @@ function FormAgregar() {
                 </form>
              </div>
         </div>
-        : 
+        // : (mensajeEnviado && !errorEnvio)
+        : (mensajeEnviado)
+        ?
         <div className="exitoEnvio">
-            <p>¡Enviado!</p>
-            <p><Link to="/" className='links roboto-thin'><button> VER TARJETAS</button></Link></p>
-        </div>}
+        <p>¡Enviado!</p>
+        <p><Link to="/" className='links roboto-thin'><button> VER TARJETAS</button></Link></p>
     </div>
+        :
+        <div className="errorEnvio">
+             <p>Error en los datos ingresados, por favor verificalos e intenta nuevamente</p>
+         </div>
+         
+         
+        }
+        {// ?
+        // <div className="exitoEnvio">
+        //     <p>¡Enviado!</p>
+        //     <p><Link to="/" className='links roboto-thin'><button> VER TARJETAS</button></Link></p>
+        // </div>
+        // :
+        // <div className="errorEnvio">
+        //     <p>Error en los datos ingresados, por favor verificalos e intenta nuevamente</p>
+        // </div>
+        // }
+}
+    </div>
+        
     )
 }
+
 export default FormAgregar;
