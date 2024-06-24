@@ -23,13 +23,6 @@ function GatosCards() {
     }, [mensajeEliminado, mensajeEditado])
 
 
-    //Editar gato por id 
-    const handleEditar = (e) => {
-        e.preventDefault()
-        setMensajeEditado(true)
-        setIdGatoElegido(e.target.id)
-    }
-
     //Eliminar gato por id
     const handleEliminar = (e) => {
         e.preventDefault()
@@ -43,6 +36,13 @@ function GatosCards() {
                 setTimeout(() => { setMensajeEliminado(false) }, 2000)
             })
             .catch(err => console.log("No se logro enviar: " + err))
+    }
+
+     //Editar gato por id 
+     const handleEditar = (e) => {
+        e.preventDefault()
+        setMensajeEditado(true)
+        setIdGatoElegido(e.target.id)
     }
 
     return (

@@ -45,7 +45,7 @@ const Card = ({ gatos,
                         }
                     </>
                     :
-                    mensajeEliminado && !mensajeEditado
+                    (mensajeEliminado && !mensajeEditado)
                         ?
                         <div className="exitoEliminado">
                             <p>¡Eliminado!</p>

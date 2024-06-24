@@ -7,8 +7,10 @@ function FormEditar({ gatos, idGatoElegido, mensajeEditado, setMensajeEditado })
     const [mensaje, setMensaje] = useState(false)
 
     let gatoElegido = gatos.find(gato=>(gato.id.toString() === idGatoElegido))
+    console.log(gatoElegido)
+    console.log(gatoElegido.img)
    
-    const handlerForm = (e) => {
+    const handlerFormEditar = (e) => {
         e.preventDefault();
        
         let formInfo = {
@@ -22,7 +24,7 @@ function FormEditar({ gatos, idGatoElegido, mensajeEditado, setMensajeEditado })
 
         fetch(`http://localhost:4000/${idGatoElegido}`, {
             method:`PATCH`,
-            body: JSON.stringify(formInfo), //transformo info en json
+            body: JSON.stringify(formInfo), 
             headers:{
                 "Content-type":"application/json; charset=UTF-8",
             }
@@ -30,10 +32,9 @@ function FormEditar({ gatos, idGatoElegido, mensajeEditado, setMensajeEditado })
             .then((resp) =>{return resp.json()})
             .then((data) => {
                 console.log(data)
-                 data.info.status === 200 ? setMensaje(true) : setMensaje(false);
-                 setTimeout(() => { setMensaje(false) }, 2000);
+                 data.info.status === 200 ? setMensaje(true) : setMensaje(false)
+                 setTimeout(() => { setMensaje(false) }, 2000)
                  setTimeout(()=>{ setMensajeEditado(false) },2000)
-                 
             })
             .catch(err => console.log("No se logro enviar: " + err))
     }
@@ -46,9 +47,9 @@ function FormEditar({ gatos, idGatoElegido, mensajeEditado, setMensajeEditado })
                 <h2>EDITAR GATO</h2>
                 <p>Actualiza los datos que quieras modificar</p>
             </div>
-
+         
              <div className="contenido">
-                <form id="contactForm" onSubmit={(event)=>handlerForm(event)}>
+                    <form id="contactForm" onSubmit={handlerFormEditar}>
                     <label htmlFor="nombre"> Nombre del gato: </label>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingresa nombre del gato" defaultValue = {gatoElegido.nombre}/>
 
