@@ -42,6 +42,13 @@
 
 }
 
+.capitalizar{
+    text-transform: capitalize;
+}
+.descripcion::first-letter{
+    text-transform: uppercase;
+}
+
 .botonEliminar{
     background-color: #f36f6fb5;
 }

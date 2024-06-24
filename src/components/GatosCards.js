@@ -5,8 +5,8 @@ import Card from './Card';
 function GatosCards() {
 
     const [gatos, setGatos] = useState([]);
-    const [mensajeEditado, setMensajeEditado] = useState(false)
     const [mensajeEliminado, setMensajeEliminado] = useState(false);
+    const [mensajeEditado, setMensajeEditado] = useState(false)
     const [idGatoElegido, setIdGatoElegido] = useState(``);
 
 

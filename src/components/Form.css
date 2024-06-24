@@ -63,7 +63,7 @@ button {
     width: 100%;
 }
 
-.exitoEnvio, .exitoEditado{
+.exitoEnvio, .exitoEditado, .errorEnvio{
     background-color: #9fe59f;
     border: #9E9E9E solid 1px;
     border-radius: 4px;
@@ -71,6 +71,10 @@ button {
     padding: 30px;
     width: 30vw;
     text-align: center;
+}
+
+.errorEnvio{
+    background-color: #f06e6e;
 }
 .exitoEnvio button, .exitoEditado button{
     margin: 10px 0px;

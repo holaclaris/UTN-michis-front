@@ -2,13 +2,12 @@ import "./Form.css";
 import { useState } from "react";
 import {Link} from 'react-router-dom';
 
-function FormEditar({ gatos, idGatoElegido, mensajeEditado, setMensajeEditado }) {
+function FormEditar({ gatos, idGatoElegido, setMensajeEditado }) {
 
-    const [mensaje, setMensaje] = useState(false)
+    const [mensajeActualizado, setMensajeActualizado] = useState(false)
+    const [errorEnvio, setErrorEnvio] = useState(false)
 
     let gatoElegido = gatos.find(gato=>(gato.id.toString() === idGatoElegido))
-    console.log(gatoElegido)
-    console.log(gatoElegido.img)
    
     const handlerFormEditar = (e) => {
         e.preventDefault();
@@ -32,20 +31,28 @@ function FormEditar({ gatos, idGatoElegido, mensajeEditado, setMensajeEditado })
             .then((resp) =>{return resp.json()})
             .then((data) => {
                 console.log(data)
-                 data.info.status === 200 ? setMensaje(true) : setMensaje(false)
-                 setTimeout(() => { setMensaje(false) }, 2000)
+                if (data.info.status === 200){
+                 setMensajeActualizado(true) 
+                //  : setMensajeActualizado(false)
+                 setTimeout(()=> { setMensajeActualizado(false) }, 2000)
                  setTimeout(()=>{ setMensajeEditado(false) },2000)
+                } 
+                else if (data.info.status ===422){
+                 setErrorEnvio(true)
+                 setTimeout(()=>{ setErrorEnvio(false) }, 2000)
+                }
             })
             .catch(err => console.log("No se logro enviar: " + err))
-    }
+        }
 
     return (
        <div> 
-        { mensaje === false ? 
+        { (!mensajeActualizado && !errorEnvio)
+        ? 
        <div className="formulario"> 
             <div className="titulo">
                 <h2>EDITAR GATO</h2>
-                <p>Actualiza los datos que quieras modificar</p>
+                <p>Cambia solamente los datos que quieras modificar. El resto quedara igual.</p>
             </div>
          
              <div className="contenido">
@@ -95,10 +102,18 @@ function FormEditar({ gatos, idGatoElegido, mensajeEditado, setMensajeEditado })
              </div>
         </div>
         : 
+        (mensajeActualizado && !errorEnvio)
+        ?
         <div className="exitoEditado">
             <p>¡Actualizado!</p>
             <p><Link to="/" className='links roboto-thin'><button> VER TARJETAS</button></Link></p>
-        </div>}
+        </div>
+        :
+        <div className="errorEnvio">
+            <p>Error - Todos los campos deben estar completos. Intenta nuevamente</p>
+        </div>
+        }
+       
     </div>
     )
 }

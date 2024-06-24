@@ -22,7 +22,7 @@ const Card = ({ gatos,
                                         <img src={gato.img} alt={gato.nombre} />
                                         <div className="textoBotonesGato">
                                             <div className="textoGato">
-                                                <h3>{gato.nombre}</h3>
+                                                <h3 className = "capitalizar">{gato.nombre}</h3>
                                                 <p>Sexo: {gato.sexo}</p>
                                                 <p>Raza: {gato.raza}</p>
                                                 <p>Edad: {gato.edad}</p>
@@ -55,7 +55,6 @@ const Card = ({ gatos,
                         <FormEditar 
                             gatos = { gatos} 
                             idGatoElegido = { idGatoElegido } 
-                            mensajeEditado = { mensajeEditado }
                             setMensajeEditado= { setMensajeEditado }/>
 
             }
