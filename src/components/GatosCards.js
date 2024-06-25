@@ -26,8 +26,8 @@ function GatosCards() {
     //Eliminar gato por id
     const handleEliminar = (e) => {
         e.preventDefault()
-
-        fetch(`http://localhost:4000/${e.target.id}`, {
+        
+         fetch(`http://localhost:4000/${e.target.value}`, {
             method: 'delete',
         })
             .then((resp) => { return resp.json() })
@@ -42,7 +42,7 @@ function GatosCards() {
      const handleEditar = (e) => {
         e.preventDefault()
         setMensajeEditado(true)
-        setIdGatoElegido(e.target.id)
+        setIdGatoElegido(e.target.value)
     }
 
     return (

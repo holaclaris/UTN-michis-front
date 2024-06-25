@@ -33,8 +33,6 @@ function FormAgregar() {
                     setTimeout(()=> { setMensajeEnviado(false) }, 2000)
                 
                 }else{
-                // } else if (data.info.status === 422){
-                    //Verificar por que cuando da este error luego se cae el server
                     setMensajeEnviado(false)
                     setErrorEnvio(true)
                     setTimeout(()=>{ setErrorEnvio(false) }, 2000)
@@ -104,7 +102,7 @@ function FormAgregar() {
         : (mensajeEnviado)
         ?
         <div className="exitoEnvio">
-        <p>¡Enviado!</p>
+        <p>¡Creado!</p>
         <p><Link to="/" className='links roboto-thin'><button> VER TARJETAS</button></Link></p>
     </div>
         :

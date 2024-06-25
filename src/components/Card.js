@@ -29,12 +29,12 @@ const Card = ({ gatos,
                                                 <p className="descripcion">{gato.descripcion}</p>
                                             </div>
                                             <button className="botonEditar"
-                                                id={gato.id}
+                                                value={gato.id}
                                                 onClick={handleEditar}
                                             > Editar
                                             </button>
                                             <button className="botonEliminar"
-                                                id={gato.id}
+                                                value={gato.id}
                                                 onClick={handleEliminar}
                                             >Eliminar
                                             </button>
@@ -49,7 +49,7 @@ const Card = ({ gatos,
                         ?
                         <div className="exitoEliminado">
                             <p>¡Eliminado!</p>
-                            <p><Link to="/" className='links roboto-thin'><button> VER TARJETAS</button></Link></p>
+                            <p> Cargando tarjetas...</p>
                         </div>
                         :
                         <FormEditar 

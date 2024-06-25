@@ -105,7 +105,7 @@ function FormEditar({ gatos, idGatoElegido, setMensajeEditado }) {
         ?
         <div className="exitoEditado">
             <p>¡Actualizado!</p>
-            <p><Link to="/" className='links roboto-thin'><button> VER TARJETAS</button></Link></p>
+            <p> Cargando tarjetas...</p>
         </div>
         :
         <div className="errorEnvio">
