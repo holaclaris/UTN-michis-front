@@ -1,6 +1,5 @@
 import "./Card.css";
 import FormEditar from "./FormEditar";
-import { Link } from "react-router-dom";
 const Card = ({ gatos,
     mensajeEditado,
     setMensajeEditado,

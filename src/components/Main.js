@@ -1,7 +1,7 @@
 
 import GatosCards from "./GatosCards";
 
-function Main() {
+function Main({gatosFiltrados}) {
 
   return (
     <main id="inicio">
@@ -11,7 +11,7 @@ function Main() {
         <div id="gatitos"></div>
       </div>
        
-      <GatosCards /> 
+      <GatosCards gatosFiltrados={gatosFiltrados}/> 
 
       <div className="presentacion">
         <p>¿Dudas o consultas?</p>

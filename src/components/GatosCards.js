@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './GatosCards.css'
 import Card from './Card';
 
-function GatosCards() {
+function GatosCards({gatosFiltrados}) {
 
     const [gatos, setGatos] = useState([]);
     const [mensajeEliminado, setMensajeEliminado] = useState(false);

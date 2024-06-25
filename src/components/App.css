@@ -206,6 +206,10 @@ header {
     align-items: center;
 }
 
+header form{
+    display: flex;
+    align-items: baseline;
+}
 #busqueda {
     background-color: #ffffffde;
     border: none;

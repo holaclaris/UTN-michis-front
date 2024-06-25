@@ -1,6 +1,5 @@
 import "./Form.css";
 import { useState } from "react";
-import {Link} from 'react-router-dom';
 
 function FormEditar({ gatos, idGatoElegido, setMensajeEditado }) {
 
