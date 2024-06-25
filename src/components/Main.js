@@ -7,7 +7,7 @@ function Main() {
     <main id="inicio">
       <div className="presentacion">
         <p>Conoce a nuestros pequeños amigos</p>
-        <p>Llena tu vida de ternura!</p>
+        <p>¡Crea tus propias tarjetas!</p>
         <div id="gatitos"></div>
       </div>
        

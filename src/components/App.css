@@ -30,12 +30,12 @@ body {
     display: flex;
     background-color: black;
     text-align: center;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     align-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 15px;
+    padding: 20px;
 }
 
 .banner .contenedorWhatsapp {
@@ -141,6 +141,7 @@ header {
 }
 #barraOcultar.is-open{
     display: flex;
+    flex-direction: column;
     padding: 0px 20px;
 }
 
@@ -220,11 +221,23 @@ header {
 #buscar{
     margin:10px;
     padding:10px;
-    width:25%
+    width:60px;
+    transition: all 0.2s ease
+}
+
+#buscar:hover{
+    transform:scale(1.1);
+    border-color: dimgray;
+}
+#buscar:active{
+    transform:scale(1.1);
+    border-color: dimgray;
 }
 .contenedorPortada img {
     object-fit: cover;
-    width: 100%;
+    width: 60%;
+    margin-left: 35%;
+    margin-top: 8%;
 }
 .contenedorPortada.paginas{
     overflow:hidden;
@@ -237,7 +250,7 @@ header {
 }
 
 main {
-    padding: 15px;
+    padding: 10px 30px;
 }
 
 .presentacion {
@@ -325,7 +338,12 @@ main {
 
 
 /*Media Queries*/
-
+@media screen and (min-width:450px){
+    .contenedorPortada img {
+        margin-left: 28%;
+        margin-top: 0;
+    }
+}
 
 @media screen and (min-width:768px) {
 
@@ -334,9 +352,11 @@ main {
     #navBar.is-open {
         top: 1vh;
     }
-
     #cruz.is-open {
         display: none;
+    }
+    #barraOcultar.is-open{
+        flex-direction: row;
     }
 
     #contenedorTitulo.is-open {
@@ -346,17 +366,9 @@ main {
     }
 /*Fin clases menu hamburguesa */
 
-    .banner {
-        padding: 0 10%;
-    }
-    .banner .contenedorWhatsapp {
-        top: 12vh;
-        right: 5vw;
-        filter: drop-shadow(2px 4px 4px black);
-    }
-
     header{
-        background-image: url(https://clipartcraft.com/images/cat-transparent-background-4.png);
+        background-image: url(http://pngedits.com/public/uploads/preview/three-kitten-png-images-full-hd-11614915983pvxgtfomub.png);
+        /* background-image: url(https://clipartcraft.com/images/cat-transparent-background-4.png); */
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -407,10 +419,6 @@ main {
         display: none;
     }
 
-    #busqueda {
-        width: 22vw;
-    }
-
     .contenedorPortada {
         display: none;
     }
@@ -429,10 +437,6 @@ main {
         display: flex;
         align-items: center;
     }
-  
-    #busqueda{
-        width: 30vw;
-    }
 
     .presentacion {
         width: 70%;
@@ -444,5 +448,9 @@ main {
 
     .contenedorPortada {
         width: 60%;
+    }
+    #busqueda {
+        width: 25vw;
+        max-width: 700px;
     }
 }

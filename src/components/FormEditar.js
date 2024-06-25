@@ -56,19 +56,19 @@ function FormEditar({ gatos, idGatoElegido, setMensajeEditado }) {
          
              <div className="contenido">
                     <form id="contactForm" onSubmit={handlerFormEditar}>
-                    <label htmlFor="nombre"> Nombre del gato: </label>
+                    <label htmlFor="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingresa nombre del gato" defaultValue = {gatoElegido.nombre}/>
 
-                    <p>Sexo: </p>
+                    <p>Sexo</p>
                     <select name="sexo" defaultValue={gatoElegido.sexo}>
-                        <option value="">Seleccionar sexo... </option>
+                        <option value="">Selecciona sexo... </option>
                         <option value="hembra">Hembra</option>
                         <option value="macho">Macho</option>
                     </select>
 
-                    <p>Raza: </p>
+                    <p>Raza</p>
                     <select name="raza" defaultValue={gatoElegido.raza} >
-                        <option value="">Seleccionar raza... </option>
+                        <option value="">Selecciona raza... </option>
                         <option value="angora">Angora</option>
                         <option value="azul ruso">Azul ruso</option>
                         <option value="bengali">Bengali</option>
@@ -82,15 +82,15 @@ function FormEditar({ gatos, idGatoElegido, setMensajeEditado }) {
                         <option value="otra">Otra</option>
                     </select>
 
-                    <p>Edad: </p>
+                    <p>Edad</p>
                     <select name="edad" defaultValue={gatoElegido.edad} >
-                        <option value="">Seleccionar edad... </option>
+                        <option value="">Selecciona edad... </option>
                         <option value="cachorro">Cachorro (Menor de 2 años)</option>
                         <option value="adulto">Adulto (2 a 7 años)</option>
                         <option value="adulto mayor">Adulto Mayor (mayor de 7 años)</option>
                     </select>
 
-                    <label htmlFor="descripcion">Acerca de: </label>
+                    <label htmlFor="descripcion">Acerca de</label>
                     <textarea id="descripcion" name="descripcion" placeholder="Escribe algo sobre él" defaultValue={gatoElegido.descripcion}></textarea>
 
                     <label htmlFor="img">Sube el link de su imagen (URL) </label>

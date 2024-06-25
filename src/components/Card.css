@@ -8,8 +8,16 @@
     flex-direction: column;
     font-weight:400;
     justify-content: center;
+    font-size:0.9rem;
+    transition: all 0.2s ease
 }
 
+.tarjetaGato:hover{
+    transform: scale(1.1);
+}
+.tarjetaGato:active{
+    transform: scale(1.1);
+}
 
 .tarjetaGato img{
     width: 100%;
@@ -37,10 +45,20 @@
 }
 
 .tarjetaGato button{
+    background-color:#c9c3c3b5 ;
     margin: 5px;
     width:60%;
-
+    transition: all 0.2s ease
 }
+
+.tarjetaGato button:hover{
+   transform:scale(1.1);
+   border-color:dimgrey
+}
+.tarjetaGato button:active{
+    transform:scale(1.1);
+    border-color:dimgrey
+ }
 
 .capitalizar{
     text-transform: capitalize;
@@ -49,8 +67,8 @@
     text-transform: uppercase;
 }
 
-.botonEliminar{
-    background-color: #f36f6fb5;
+.tarjetaGato button.botonEliminar{
+    background-color: #f06161b5;
 }
 
 .exitoEliminado{
@@ -81,5 +99,15 @@
 @media screen and (min-width: 768px){
     .tarjetaGato{
         width:30%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .tarjetaGato{
+        width:23%;
+        max-width: 400px;
+    }
+    .tarjetaGato img{
+        height:50vh;
     }
 }

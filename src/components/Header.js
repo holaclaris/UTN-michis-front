@@ -33,22 +33,21 @@ function Header(){
               <li>
                 <Link to="/AgregarGatitos" className='links roboto-thin'>AÑADIR GATO</Link>
               </li>
+            </ul>
 
-              <li>
-                <div className="contenedorLupaCarrito">
+              <div className="contenedorLupaCarrito">
                   <IoIosSearch id="lupa"/>
                   <input type="text" id="busqueda" name="busqueda" placeholder="Ingresa tu búsqueda..."/>
                   <button type="submit" id="buscar"> Buscar </button>
                 </div>
-              </li>
-            </ul>
+
           </div>
         </nav>
   
         <div className="contenedorPortada">
           <img 
-            src="/cat.png"
-            alt="Gato de perfil" 
+            src="/3cats.png"
+            alt="Tres gatos cachorros" 
             />
         </div>
       </header>

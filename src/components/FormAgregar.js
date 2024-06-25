@@ -47,26 +47,26 @@ function FormAgregar() {
         ?
        <div className="formulario"> 
             <div className="titulo">
-                <h2>AÑADIR GATO</h2>
+                <h2>NUEVO GATO</h2>
                 <p>Completa el formulario con los datos del gato 
                 y aparecerá en la página</p>
             </div>
 
              <div className="contenido">
                 <form id="contactForm" onSubmit={(event)=>handlerForm(event)}>
-                    <label htmlFor="nombre">Nombre del gato: </label>
+                    <label htmlFor ="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingresa nombre del gato" required />
 
-                    <p>Sexo: </p>
-                    <select name="sexo" required>
-                        <option value="">Seleccionar sexo... </option>
+                    <label htmlFor="sexo">Sexo</label>
+                    <select name = "sexo" required>
+                        <option value="">Selecciona sexo... </option>
                         <option value="hembra">Hembra</option>
                         <option value="macho">Macho</option>
                     </select>
 
-                    <p>Raza: </p>
+                    <label htmlFor="raza">Raza</label>
                     <select name="raza" required>
-                        <option value="">Seleccionar raza... </option>
+                        <option value="">Selecciona raza... </option>
                         <option value="angora">Angora</option>
                         <option value="azul ruso">Azul ruso</option>
                         <option value="bengali">Bengali</option>
@@ -80,15 +80,15 @@ function FormAgregar() {
                         <option value="otra">Otra</option>
                     </select>
 
-                    <p>Edad: </p>
+                    <label htmlFor="edad">Edad</label>
                     <select name="edad" required>
-                        <option value="">Seleccionar edad... </option>
+                        <option value="">Selecciona edad... </option>
                         <option value="cachorro">Cachorro (Menor de 2 años)</option>
                         <option value="adulto">Adulto (2 a 7 años)</option>
                         <option value="adulto mayor">Adulto Mayor (mayor de 7 años)</option>
                     </select>
 
-                    <label htmlFor="descripcion">Acerca de: </label>
+                    <label htmlFor="descripcion">Acerca de</label>
                     <textarea id="descripcion" name="descripcion" placeholder="Escribe algo sobre él" required></textarea>
 
                     <label htmlFor="img">Sube el link de su imagen (URL) </label>
@@ -98,7 +98,6 @@ function FormAgregar() {
                 </form>
              </div>
         </div>
-        // : (mensajeEnviado && !errorEnvio)
         : (mensajeEnviado)
         ?
         <div className="exitoEnvio">
@@ -112,17 +111,7 @@ function FormAgregar() {
          
          
         }
-        {// ?
-        // <div className="exitoEnvio">
-        //     <p>¡Enviado!</p>
-        //     <p><Link to="/" className='links roboto-thin'><button> VER TARJETAS</button></Link></p>
-        // </div>
-        // :
-        // <div className="errorEnvio">
-        //     <p>Error en los datos ingresados, por favor verificalos e intenta nuevamente</p>
-        // </div>
-        // }
-}
+
     </div>
         
     )
