@@ -8,7 +8,7 @@ function FormAgregar() {
    
     const handlerForm = (e) => {
         e.preventDefault();
-       
+
         let formInfo = {
             nombre:e.target[0].value,
             sexo:e.target[1].value,
@@ -23,16 +23,17 @@ function FormAgregar() {
             method:`post`,
             body: JSON.stringify(formInfo), 
             headers:{
-                "Content-Type":"application/json"
-            }})
+                "Content-Type":"application/json"}
+            })
             .then((resp) =>{return resp.json()})
             .then((data) => {
                 console.log(data)
                 if (data.info.status === 201){
                     setMensajeEnviado(true) 
                     setTimeout(()=> { setMensajeEnviado(false) }, 2000)
-            
-                } else if (data.info.status === 422){
+                
+                }else{
+                // } else if (data.info.status === 422){
                     //Verificar por que cuando da este error luego se cae el server
                     setMensajeEnviado(false)
                     setErrorEnvio(true)
