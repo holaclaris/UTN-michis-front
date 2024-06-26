@@ -48,7 +48,7 @@ function Header({ setFormAgregar, handlerFormBuscar, setFiltrados }){
               </li>
               <li className='roboto-medium' 
                   onClick = {()=>{setFormAgregar(true)}}
-                  >AÑADIR GATO
+                  >CREAR GATO
               </li>
             </ul>
               <div className="contenedorLupaCarrito">
