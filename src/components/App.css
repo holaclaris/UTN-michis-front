@@ -93,20 +93,18 @@ header {
     top: 13vh;
 }
 
-
 .contenedorTitulo h1 {
     color: black;
-    filter: drop-shadow(2px 4px 2px #edefee);
+    filter: drop-shadow(2px 2px 2px #3b3c3b);
     font-size: 2rem;
     font-weight: 400;
     padding: 15px;
 }
 
 .contenedorTitulo p {
-    filter: drop-shadow(2px 4px 2px #edefee);
-    font-size: 0.9rem;
+    font-size: 1.1 rem;
     font-variant: all-small-caps;
-    font-weight:400;
+    font-weight:500;
     padding-left: 39px;
     margin-top: -19px;
 }
@@ -175,30 +173,18 @@ header {
 }
 
 .navBar .navLinks li {
-    transition: all 0.2s
-}
-
-.navBar .navLinks li:hover {
-    transform: scale(1.2);
-}
-
-.navBar .navLinks li:active {
-    transform: scale(1.2);
-} 
-
-.navBar ul a {
-    color: black;
     font-size: 1.2rem;
-    font-weight: 400;
-    text-decoration: none;
+    transition: all 0.2s
 }
 
 .navBar ul li:hover{
     filter: drop-shadow(2px 4px 2px #848685);
+    transform: scale(1.1);
 }
 
 .navBar ul li:active{
-    transform: scale(1.2);
+    filter: drop-shadow(2px 4px 2px #848685);
+    transform: scale(1.1);
 }
 
 .navBar ul li {
@@ -227,6 +213,8 @@ header form{
     font-size: 2em;
 }
 #buscar{
+    background-color: #cbc5c5b5;
+    border: 1px solid dimgray;
     margin:10px;
     padding:10px;
     width:60px;
@@ -235,11 +223,11 @@ header form{
 
 #buscar:hover{
     transform:scale(1.1);
-    border-color: dimgray;
+    border-color: black;
 }
 #buscar:active{
     transform:scale(1.1);
-    border-color: dimgray;
+    border-color: black;
 }
 .contenedorPortada img {
     object-fit: cover;
@@ -258,7 +246,7 @@ header form{
 }
 
 main {
-    padding: 10px 30px;
+    padding: 40px 30px;
 }
 
 .presentacion {
@@ -269,6 +257,9 @@ main {
     padding: 20px;
     width: 100%;
     text-align: center;
+}
+.presentacion p{
+    padding: 10px;
 }
 
 .contenedorFooter {
@@ -381,6 +372,9 @@ main {
         background-repeat: no-repeat;
         border-bottom: none;
     }
+    main{
+        margin-top: 30px;
+    }
 
     .contenedorTitulo {      
         text-align: center;
@@ -392,9 +386,10 @@ main {
     }
 
     #navBar {
-        background-color: #b69f9f4d;
+        background-color: #b69f9f30;
         margin: auto;
         position: relative;
+        top: 6vh;
     }
 
     #barraOcultar {
@@ -413,6 +408,9 @@ main {
     .navBar .navLinks {
         display: flex;
         flex-direction: row;
+    }
+    #busqueda {
+        width: 20vw;
     }
 
     #barraOcultar {
@@ -445,6 +443,7 @@ main {
     }
 
     .presentacion {
+        padding: 10px 0 30px 0;
         width: 70%;
     }
 

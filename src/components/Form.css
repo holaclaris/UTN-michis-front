@@ -1,5 +1,6 @@
 .formulario main {
     padding: 40px 0;
+
 }
 
 .formulario {
@@ -7,7 +8,7 @@
     border: 1px solid #ccc;
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
+    margin: 50px 0;
     overflow: hidden;
 }
 
@@ -82,17 +83,16 @@ button:active{
 
 .errorEnvio{
     background-color: #f06e6e;
-    width:70%
 }
 
-.exitoEnvio button, .exitoEditado button{
+.exitoEnvio button{
     margin: 10px 0px;
     padding:10px;
     transition: all 0.2s ease
 }
 .exitoEnvio button:hover{
    transform: scale(1.1);
-}
+} 
 
 /* Media Queries */
 
@@ -114,7 +114,7 @@ button:active{
 @media only screen and (min-width: 768px){
     .formulario{
         width:70%;
-        margin: 20px auto;
+        margin: 70px auto;
     }
     .exitoEnvio, .errorEnvio{
         width:40%;
