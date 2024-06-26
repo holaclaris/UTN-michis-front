@@ -1,8 +1,7 @@
 import "./Form.css";
 import { useState } from "react";
-import {Link} from 'react-router-dom';
 
-function FormAgregar() {
+function FormAgregar({setFormAgregar}) {
     const [mensajeEnviado, setMensajeEnviado] = useState(false)
     const [errorEnvio, setErrorEnvio] = useState(false)
    
@@ -31,6 +30,7 @@ function FormAgregar() {
                 if (data.info.status === 201){
                     setMensajeEnviado(true) 
                     setTimeout(()=> { setMensajeEnviado(false) }, 2000)
+                    setTimeout(()=>{setFormAgregar(false)}, 2000)
                 
                 }else{
                     setMensajeEnviado(false)
@@ -102,7 +102,7 @@ function FormAgregar() {
         ?
         <div className="exitoEnvio">
         <p>¡Creado!</p>
-        <p><Link to="/" className='links roboto-thin'><button> VER TARJETAS</button></Link></p>
+        <button onClick = {()=>setFormAgregar(false)}> VER TARJETAS</button>
     </div>
         :
         <div className="errorEnvio">

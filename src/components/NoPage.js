@@ -1,6 +1,10 @@
+import './App.css';
+
 function NoPage(){
     return(
-        <h1>Pagina no encontrada</h1>
+        <div className = "page-not-found">
+            <img src = "/page-not-found.png" alt = "Página no encontrada - Robot triste"/>
+        </div>
     )
 }
 export default NoPage;

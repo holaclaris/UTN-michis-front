@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";  
 import { MdOutlineMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
@@ -6,13 +5,18 @@ import { IoIosSearch } from "react-icons/io";
 import 'animate.css';
 
 
-function Header({handlerFormBuscar, setFiltrados}){
-
+function Header({setFormAgregar, handlerFormBuscar, setFiltrados}){
+  
   const [isOpen, setIsOpen] = useState(false);
   
   const toggleMenu = ()=>{
     setIsOpen((open)=>!open);
   };
+
+  const verGatos = ()=>{
+    setFiltrados("")
+    setFormAgregar(false)
+  }
 
     return (
         <header>
@@ -26,11 +30,13 @@ function Header({handlerFormBuscar, setFiltrados}){
           <div id="barraOcultar" className={`${isOpen ? "is-open": ""}`}>
             <ul className="navList navLinks">
               <li><IoMdClose id="cruz" onClick={toggleMenu} className={`${isOpen ? "is-open": ""}`}/></li> 
-              <li>
-                <Link to="/" className='links roboto-thin' onClick={()=>setFiltrados("")}>GATOS</Link>
+              <li className='roboto-medium' 
+                  onClick={verGatos}
+                  >GATOS
               </li>
-              <li>
-                <Link to="/AgregarGatitos" className='links roboto-thin'>AÑADIR GATO</Link>
+              <li className='roboto-medium' 
+                  onClick = {()=>{setFormAgregar(true)}}
+                  >AÑADIR GATO
               </li>
             </ul>
               <div className="contenedorLupaCarrito">

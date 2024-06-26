@@ -1,12 +1,15 @@
 import Banner from "./Banner";
 import Header from "./Header";
 import Main from "./Main";
+import FormAgregar from "./FormAgregar"
 import Footer from "./Footer";
 import { useState } from "react";
 
 function Home(){
 
   const [filtrados, setFiltrados] = useState("")
+  //Prueba
+  const [formAgregar, setFormAgregar] = useState(false)
 
   const handlerFormBuscar = (e)=>{
     e.preventDefault()
@@ -29,14 +32,22 @@ function Home(){
       <body className='roboto-medium'> 
         <Banner />
         <Header 
+          setFormAgregar = {setFormAgregar}
           handlerFormBuscar= {handlerFormBuscar}
           setFiltrados = {setFiltrados}
         />
-
+      
+      { !formAgregar
+        ?
         <Main 
           filtrados = {filtrados}
           setFiltrados = {setFiltrados}
         />
+        :
+        <FormAgregar 
+          setFormAgregar = {setFormAgregar}
+        />
+      }
         <Footer />
       </body>  
     )

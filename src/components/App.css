@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+.page-not-found img{
+    width:100%;
+}
+
 body {
     background-color:#f2f3f4;
     color: black;
@@ -372,7 +376,6 @@ main {
 
     header{
         background-image: url(http://pngedits.com/public/uploads/preview/three-kitten-png-images-full-hd-11614915983pvxgtfomub.png);
-        /* background-image: url(https://clipartcraft.com/images/cat-transparent-background-4.png); */
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
