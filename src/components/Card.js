@@ -1,6 +1,7 @@
 import "./Card.css";
 import FormEditar from "./FormEditar";
 const Card = ({ gatos,
+    setFiltrados,
     mensajeEditado,
     setMensajeEditado,
     handleEditar,
@@ -53,6 +54,7 @@ const Card = ({ gatos,
                         :
                         <FormEditar 
                             gatos = { gatos} 
+                            setFiltrados = {setFiltrados}
                             idGatoElegido = { idGatoElegido } 
                             setMensajeEditado= { setMensajeEditado }/>
 

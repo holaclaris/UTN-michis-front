@@ -1,7 +1,8 @@
 
 import GatosCards from "./GatosCards";
 
-function Main({gatosFiltrados}) {
+function Main({filtrados, setFiltrados}) {
+  console.log(filtrados)
 
   return (
     <main id="inicio">
@@ -11,7 +12,10 @@ function Main({gatosFiltrados}) {
         <div id="gatitos"></div>
       </div>
        
-      <GatosCards gatosFiltrados={gatosFiltrados}/> 
+      <GatosCards 
+        filtrados = {filtrados} 
+        setFiltrados = {setFiltrados}
+        /> 
 
       <div className="presentacion">
         <p>¿Dudas o consultas?</p>

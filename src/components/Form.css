@@ -80,6 +80,7 @@ button:active{
 
 .errorEnvio{
     background-color: #f06e6e;
+    width:70%
 }
 
 .exitoEnvio button, .exitoEditado button{
@@ -110,7 +111,7 @@ button:active{
         width:70%;
         margin: 20px auto;
     }
-    .exitoEnvio{
+    .exitoEnvio, .errorEnvio{
         width:40%;
     }
 }
@@ -120,7 +121,7 @@ button:active{
         width: 60%;
         max-width: 900px;
     }
-    .exitoEnvio{
+    .exitoEnvio, .errorEnvio{
         width:30%
     }
 }

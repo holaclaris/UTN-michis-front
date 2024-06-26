@@ -5,12 +5,12 @@ import Footer from "./Footer";
 
 function AgregarGatitos(){
     return (
-      <body>  
-        <Banner/>
-        <Header />
+      <>  
+        <Banner/>     
+        <Header />  
         <FormAgregar />
         <Footer/>
-      </body>
+      </>
     )
 }
 export default AgregarGatitos;

@@ -1,7 +1,7 @@
 import "./Form.css";
 import { useState } from "react";
 
-function FormEditar({ gatos, idGatoElegido, setMensajeEditado }) {
+function FormEditar({ gatos, setFiltrados, idGatoElegido, setMensajeEditado }) {
 
     const [mensajeActualizado, setMensajeActualizado] = useState(false)
     const [errorEnvio, setErrorEnvio] = useState(false)
@@ -34,6 +34,9 @@ function FormEditar({ gatos, idGatoElegido, setMensajeEditado }) {
                  setMensajeActualizado(true) 
                  setTimeout(()=> { setMensajeActualizado(false) }, 2000)
                  setTimeout(()=>{ setMensajeEditado(false) },2000)
+
+                 //Prueba
+                 setFiltrados("")
                 } 
                 else if (data.info.status ===422){
                  setErrorEnvio(true)
