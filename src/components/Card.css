@@ -90,6 +90,8 @@
     transform: scale(1.1);
  }
 
+/* Media Queries */
+
 @media screen and (min-width:576px){
     .tarjetaGato{
         width:40%;

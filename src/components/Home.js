@@ -8,7 +8,6 @@ import { useState } from "react";
 function Home(){
 
   const [filtrados, setFiltrados] = useState("")
-  //Prueba
   const [formAgregar, setFormAgregar] = useState(false)
 
   const handlerFormBuscar = (e)=>{
@@ -48,6 +47,7 @@ function Home(){
           setFormAgregar = {setFormAgregar}
         />
       }
+      
         <Footer />
       </body>  
     )

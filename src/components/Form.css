@@ -22,9 +22,11 @@
     font-weight: bold;
     flex: 1;
 }
+
 .titulo h2{
     padding:20px;
 }
+
 .titulo p{
     font-size: 0.9 rem;
     padding: 5px 20px;
@@ -92,6 +94,8 @@ button:active{
    transform: scale(1.1);
 }
 
+/* Media Queries */
+
 @media only screen and (min-width: 576px) {
     .formulario {
         flex-direction: row;
@@ -106,6 +110,7 @@ button:active{
         background-repeat: no-repeat;
     }
 }
+
 @media only screen and (min-width: 768px){
     .formulario{
         width:70%;

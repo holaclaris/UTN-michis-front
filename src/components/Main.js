@@ -1,8 +1,7 @@
 
 import GatosCards from "./GatosCards";
 
-function Main({filtrados, setFiltrados}) {
-  console.log(filtrados)
+function Main({ filtrados, setFiltrados }) {
 
   return (
     <main id="inicio">

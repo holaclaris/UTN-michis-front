@@ -1,7 +1,7 @@
 import "./Form.css";
 import { useState } from "react";
 
-function FormAgregar({setFormAgregar}) {
+function FormAgregar({ setFormAgregar }) {
     const [mensajeEnviado, setMensajeEnviado] = useState(false)
     const [errorEnvio, setErrorEnvio] = useState(false)
    
@@ -30,7 +30,7 @@ function FormAgregar({setFormAgregar}) {
                 if (data.info.status === 201){
                     setMensajeEnviado(true) 
                     setTimeout(()=> { setMensajeEnviado(false) }, 2000)
-                    setTimeout(()=>{setFormAgregar(false)}, 2000)
+                    setTimeout(()=>{ setFormAgregar(false) }, 2000)
                 
                 }else{
                     setMensajeEnviado(false)
@@ -54,8 +54,15 @@ function FormAgregar({setFormAgregar}) {
 
              <div className="contenido">
                 <form id="contactForm" onSubmit={(event)=>handlerForm(event)}>
+
                     <label htmlFor ="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa nombre del gato" required />
+                    <input 
+                        type="text" 
+                        name="nombre" 
+                        id="nombre" 
+                        placeholder="Ingresa nombre del gato" 
+                        required 
+                    />
 
                     <label htmlFor="sexo">Sexo</label>
                     <select name = "sexo" required>
@@ -89,15 +96,26 @@ function FormAgregar({setFormAgregar}) {
                     </select>
 
                     <label htmlFor="descripcion">Acerca de</label>
-                    <textarea id="descripcion" name="descripcion" placeholder="Escribe algo sobre él" required></textarea>
+                    <textarea 
+                        name="descripcion" 
+                        id = "descripcion"
+                        placeholder="Escribe algo sobre él" 
+                        required>
+                    </textarea>
 
                     <label htmlFor="img">Sube el link de su imagen (URL) </label>
-                    <textarea name="img" id="img" placeholder="https://images.com/foto-gato-345622.jpg..." required></textarea>
+                    <textarea 
+                        name="img" 
+                        id="img" 
+                        placeholder="https://images.com/foto-gato-345622.jpg..." 
+                        required>
+                    </textarea>
 
                     <button type="submit" value="Enviar">Enviar</button>
                 </form>
              </div>
         </div>
+
         : (mensajeEnviado)
         ?
         <div className="exitoEnvio">
@@ -108,12 +126,9 @@ function FormAgregar({setFormAgregar}) {
         <div className="errorEnvio">
              <p>Error en los datos ingresados, por favor verificalos e intenta nuevamente</p>
          </div>
-         
-         
         }
 
     </div>
-        
     )
 }
 

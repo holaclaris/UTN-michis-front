@@ -34,11 +34,8 @@ function FormEditar({ gatos, setFiltrados, idGatoElegido, setMensajeEditado }) {
                  setMensajeActualizado(true) 
                  setTimeout(()=> { setMensajeActualizado(false) }, 2000)
                  setTimeout(()=>{ setMensajeEditado(false) },2000)
-
-                 //Prueba
                  setFiltrados("")
-                } 
-                else if (data.info.status ===422){
+                } else if (data.info.status ===422){
                  setErrorEnvio(true)
                  setTimeout(()=>{ setErrorEnvio(false) }, 2000)
                 }
@@ -59,7 +56,12 @@ function FormEditar({ gatos, setFiltrados, idGatoElegido, setMensajeEditado }) {
              <div className="contenido">
                     <form id="contactForm" onSubmit={handlerFormEditar}>
                     <label htmlFor="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa nombre del gato" defaultValue = {gatoElegido.nombre}/>
+                    <input 
+                        type="text" 
+                        name="nombre" 
+                        id="nombre" 
+                        placeholder="Ingresa nombre del gato" 
+                        defaultValue = {gatoElegido.nombre}/>
 
                     <p>Sexo</p>
                     <select name="sexo" defaultValue={gatoElegido.sexo}>
@@ -93,16 +95,28 @@ function FormEditar({ gatos, setFiltrados, idGatoElegido, setMensajeEditado }) {
                     </select>
 
                     <label htmlFor="descripcion">Acerca de</label>
-                    <textarea id="descripcion" name="descripcion" placeholder="Escribe algo sobre él" defaultValue={gatoElegido.descripcion}></textarea>
+                    <textarea 
+                        id="descripcion" 
+                        name="descripcion" 
+                        placeholder="Escribe algo sobre él" 
+                        defaultValue={gatoElegido.descripcion}>
+                    </textarea>
 
-                    <label htmlFor="img">Sube el link de su imagen (URL) </label>
-                    <textarea name="img" id="img" placeholder="https://images.com/foto-gato-345622.jpg..." defaultValue={gatoElegido.img}></textarea>
+                    <label htmlFor="img">Pega el link de su imagen (URL) </label>
+                    <textarea 
+                        name="img" 
+                        id="img" 
+                        placeholder="https://images.com/foto-gato-345622.jpg..." 
+                        defaultValue={gatoElegido.img}>
+                    </textarea>
 
                     <button type="submit" value="Enviar">Enviar</button>
                 </form>
              </div>
         </div>
+
         : 
+        
         (mensajeActualizado && !errorEnvio)
         ?
         <div className="exitoEditado">
