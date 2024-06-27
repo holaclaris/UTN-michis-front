@@ -38,29 +38,30 @@ body {
     align-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 20px;
 }
 
 .banner .contenedorWhatsapp {
     position: fixed;
-    top: 1vh;
+    top: 5vh;
     right: 4vw;
     z-index: 3;
-    filter: drop-shadow(2px 4px 6px black);
 }
 
 #whatsapp {
-    color: white;
+    color:#1b8755fc;
     font-size: 3em;
     transition: all 0.1s;
 }
 
 #whatsapp:hover {
-    transform: scale(1.1)
+    filter: drop-shadow(2px 2px 2px black);
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 #whatsapp:active {
-    transform: scale(1.1)
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .banner p {
@@ -80,7 +81,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     position: relative;
-    border-top: 3px solid white;
+    border-top: 3px solid #eae484;
 }
 
 .contenedorTitulo {
@@ -180,11 +181,13 @@ header {
 .navBar ul li:hover{
     filter: drop-shadow(2px 4px 2px #848685);
     transform: scale(1.1);
+    cursor:pointer;
 }
 
 .navBar ul li:active{
     filter: drop-shadow(2px 4px 2px #848685);
     transform: scale(1.1);
+    cursor:pointer;
 }
 
 .navBar ul li {
@@ -224,10 +227,12 @@ header form{
 #buscar:hover{
     transform:scale(1.1);
     border-color: black;
+    cursor:pointer;
 }
 #buscar:active{
     transform:scale(1.1);
     border-color: black;
+    cursor: pointer;
 }
 .contenedorPortada img {
     object-fit: cover;
@@ -289,11 +294,13 @@ main {
 .contenedorFooter .contenedorWhatsapp:hover {
     transform: scale(1.2);
     color: #343336;
+    cursor: pointer;
 }
 
 .contenedorFooter .contenedorWhatsapp:active {
     transform: scale(1.2);
     color: #343336;
+    cursor: pointer;
 }
 
 .contenedorFooter .contenedorWhatsapp a {
@@ -328,11 +335,13 @@ main {
 .contenedorIconos .icono:hover {
     transform: scale(1.2);
     color: #343336;
+    cursor: pointer;
 }
 
 .contenedorIconos .icono:active {
     transform: scale(1.2);
     color: #343336;
+    cursor:pointer;
 }
 
 
@@ -373,7 +382,7 @@ main {
         border-bottom: none;
     }
     main{
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     .contenedorTitulo {      
@@ -443,7 +452,7 @@ main {
     }
 
     .presentacion {
-        padding: 10px 0 30px 0;
+        padding: 10px;
         width: 70%;
     }
 

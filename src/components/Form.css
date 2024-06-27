@@ -66,10 +66,12 @@ button {
 button:hover{
     transform: scale(1.1);
     border-color: dimgray;
+    cursor: pointer;
 }
 button:active{
     transform: scale(1.1);
     border-color: dimgray;
+    cursor: pointer;
 }
 
 .exitoEnvio, .exitoEditado, .errorEnvio{
@@ -92,6 +94,7 @@ button:active{
 }
 .exitoEnvio button:hover{
    transform: scale(1.1);
+   cursor: poninter;
 } 
 
 /* Media Queries */

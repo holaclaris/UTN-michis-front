@@ -6,8 +6,7 @@ function Main({ filtrados, setFiltrados }) {
   return (
     <main id="inicio">
       <div className="presentacion">
-        <p>¡Tarjetas de gatos personalizadas!</p>
-        <p>Crea, busca, edita o elimina...</p>
+        <p>Crea, busca, edita o elimina tus propias tarjetas</p>
         <div id="gatitos"></div>
       </div>
        

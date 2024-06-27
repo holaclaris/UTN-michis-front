@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 function Banner() {
     return (
         <div className="banner">
-            <p>¡CREA TARJETAS CON TUS GATOS FAVORITOS!</p>
+            <p>¡TARJETAS CON TUS GATOS FAVORITOS!</p>
             <div className="contenedorWhatsapp">
                 <a href="http://wa.me/5491144446961" target="_blank" rel="noopener noreferrer">
                     <FaWhatsapp id="whatsapp"/>

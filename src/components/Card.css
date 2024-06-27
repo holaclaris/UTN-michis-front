@@ -53,11 +53,13 @@
 
 .tarjetaGato button:hover{
    transform:scale(1.1);
-   border-color:dimgrey
+   border-color:dimgrey;
+   cursor: pointer;
 }
 .tarjetaGato button:active{
     transform:scale(1.1);
-    border-color:dimgrey
+    border-color:dimgrey;
+    cursor: pointer;
  }
 
 .capitalizar{
@@ -88,6 +90,7 @@
 }
 .exitoEliminado button:hover{
     transform: scale(1.1);
+    cursor: pointer;
  }
 
 /* Media Queries */
